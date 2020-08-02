@@ -4,7 +4,7 @@ import aiohttp
 import handlers
 
 from aiogram import Bot, types
-from misc import dp
+from misc import dp, bot
 from aiogram.utils import executor
 from aiogram.utils.executor import start_webhook
 from aiogram.dispatcher.webhook import get_new_configured_app
