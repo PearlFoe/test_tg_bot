@@ -5,7 +5,7 @@ import handlers
 
 from aiogram import Bot, types
 from misc import dp
-from aiogram.utils import executor
+from aiogram.utils import executor, context
 from aiogram.dispatcher.webhook import get_new_configured_app
 
 PROJECT_NAME = 'warm-reaches-60292'
