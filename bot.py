@@ -8,7 +8,7 @@ from misc import dp
 from aiogram.utils import executor
 from aiogram.dispatcher.webhook import get_new_configured_app
 
-PROJECT_NAME = 'blooming-journey-23124'
+PROJECT_NAME = 'warm-reaches-60292'
 
 WEBHOOK_HOST = f'https://{PROJECT_NAME}.herokuapp.com'
 WEBHOOK_URL_PATH = f'/webhook/{config.token}'
