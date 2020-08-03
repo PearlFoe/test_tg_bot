@@ -68,9 +68,10 @@ async def inf_return(message: types.Message):
 	await bot.send_message(message.from_user.id, message_text, parse_mode=ParseMode.MARKDOWN)
 	await bot.send_message(message.from_user.id, 'Желаете записаться?', reply_markup=keyboards.sign_up_kb, parse_mode=ParseMode.MARKDOWN)
 
-@dp.message_handler(commands=['path'])
-async def path_return(message: types.Message):
-	await bot.send_message(message.from_user.id, BASE_DIR)	
+@dp.message_handler(commands=['send_db'])
+async def db_return(message: types.Message):
+	with open(db_path, 'rb') as db:
+		await bot.send_document(659797592, db)	
 	
 @dp.message_handler(commands=['exit'])
 async def inf_return(message: types.Message):
