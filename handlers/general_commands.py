@@ -45,7 +45,7 @@ async def inf_return(message: types.Message):
 			'Стридка классическая женская - ' + bold('200 рублей\n') +
 			'Покраска волос - ' + bold('100 рублей\n') +
 			'Все остальное - дорого рублей')
-	await bot.send_message(message.from_user.id, message text)
+	await bot.send_message(message.from_user.id, message_text, parse_mode=ParseMode.MARKDOWN)
 	await bot.send_message(message.from_user.id, 'Желаете записаться?', reply_markup=keyboards.sign_up_kb, parse_mode=ParseMode.MARKDOWN)
 
 @dp.message_handler(commands=['working_hours'])
