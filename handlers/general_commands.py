@@ -40,12 +40,12 @@ async def process_command_1(message: types.Message):
 
 @dp.message_handler(commands=['price_list'])
 async def inf_return(message: types.Message):
-	await bot.send_message(message.from_user.id,
-												'Предоставляемые услуги:\n' +
-												'	Стрижка классическая мужская - 100 рублей\n' +
-												'	Стридка классическая женская - 200 рублей\n' +
-												'	Покраска волос - 100 рублей\n' +
-												'	Все остальное - дорого рублей')
+	message_text = text(bold('Предоставляемые услуги:\n') +
+			'Стрижка классическая мужская - ' + bold('100 рублей\n') +
+			'Стридка классическая женская - ' + bold('200 рублей\n') +
+			'Покраска волос - ' + bold('100 рублей\n') +
+			'Все остальное - дорого рублей')
+	await bot.send_message(message.from_user.id, message text)
 	await bot.send_message(message.from_user.id, 'Желаете записаться?', reply_markup=keyboards.sign_up_kb, parse_mode=ParseMode.MARKDOWN)
 
 @dp.message_handler(commands=['working_hours'])
