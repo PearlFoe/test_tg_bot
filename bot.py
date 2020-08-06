@@ -2,6 +2,7 @@ import os
 import config
 import aiohttp
 import handlers
+import logging
 
 from aiogram import Bot, types
 from misc import dp, bot
